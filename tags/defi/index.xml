@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeFi on Leo Young&#39;s Blog</title>
+    <link>https://leoyoung0.github.io/tags/defi/</link>
+    <description>Recent content in DeFi on Leo Young&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://leoyoung0.github.io/tags/defi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>加密资产 | 无损彩票</title>
+      <link>https://leoyoung0.github.io/posts/2020-9-02_crypto_pooltogether/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://leoyoung0.github.io/posts/2020-9-02_crypto_pooltogether/</guid>
+      <description>根据 Research and Market 数据，全球彩票业 2020 年至 2024 年之间预计增长 2,205.2 亿美元，复合年增长率 (CAGR) 10%。目前市场规模大概在五千亿美元。
+但目前彩票业对参与者不是最优选。购买者获奖机会微乎其微，而损失本金确实大概率事件。最大的赢家就是彩票公司或发行者。
+为何因此还有人买彩票？彩票利用大多数人的认知偏见。多数人不理解根本的风险回报机制。购买彩票前只考虑到巨额回报，而忽视了低赢率。多数人参与其中损失也是自然的事情。
+而 PoolTogether 便是利用去中心化网络解决这个问题。让参与者参与到奖池，有机会获得大奖，而不损失投资。
+什么是 PoolTogether？ PoolTogether 就是无损失彩票。相像可以买彩票有机会赢得奖金，而且始终有机会拿回你的本金。
+用户通过智能合约存入 Dai 或 USDC 到 PoolTogether 资金池。PoolTogether 会将钱存入开放式货币市场 Compound.Finance。Compound 会将这些资金借出给货币市场用户。这些资金借贷的利息累积到资金池作为奖励。奖金还包括由个人或公司为生态发展存入 Dai 叫做“赞助资金”(Sponsored Dai) 这些资金产生的利息也用于资金池奖励。
+用户每存入一个 DAI 或 USDC 便获得一张彩票 (ticket)。加入资金池有 1,000 Dai，其中你存入 1 Dai，那么你就有一张彩票，获奖概率是 0.1%。
+资金池每周开奖。用户资金可以随时取出。只要存款一直在资金池，便可是从参加抽奖。
+货币乐高 事实上，PoolTogether 这种机制并不新鲜，与中奖储蓄 (Prize-linked savings, PLS) 类似。PLS 是传统银行用存款获得大额奖金抽奖鼓励用户存款的方式。
+通过智能合约部署 PLS 可以保证资金安全性和抽奖公平性。无需 KYC/AML，无需许可，全球用户无障碍参与。
+PoolTogether 可以利用无损彩票吸引用户，同时可为 DeFi 下游提供资金池，带来更多流动性。
+PoolTogether 有潜力成为 DeFi 彩票的重要组成部分，甚至在全球彩票业中占得份额。
+抽奖机制 抽奖机制如下:</description>
+    </item>
+    
+  </channel>
+</rss>

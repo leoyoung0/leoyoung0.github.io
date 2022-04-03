@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cryptography on Leo Young&#39;s Blog</title>
+    <link>https://leoyoung0.github.io/tags/cryptography/</link>
+    <description>Recent content in cryptography on Leo Young&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 02:27:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://leoyoung0.github.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为何 “Commitment” 称为“秘诺”</title>
+      <link>https://leoyoung0.github.io/posts/2020-1-1_commitment_english-translation/</link>
+      <pubDate>Wed, 01 Jan 2020 02:27:12 +0800</pubDate>
+      
+      <guid>https://leoyoung0.github.io/posts/2020-1-1_commitment_english-translation/</guid>
+      <description>前几天在翻译 Grin 的文档 Introduction to Switch Commitments 中出现 “Commitment Scheme”。“Commitment Scheme” 一般直接翻译为“承诺方案”。首先来看维基百科对这个词的解释。
+ A way to visualize a commitment scheme is to think of a sender as putting a message in a locked box, and giving the box to a receiver. The message in the box is hidden from the receiver, who cannot open the lock themselves. Since the receiver has the box, the message inside cannot be changed—merely revealed if the sender chooses to give them the key at some later time.</description>
+    </item>
+    
+  </channel>
+</rss>

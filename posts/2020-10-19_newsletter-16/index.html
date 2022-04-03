@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="分布所周刊 #16 | 循环往复">
+<meta itemprop="description" content="时间真快，有一个月没有更新公号了。
+最近有些焦虑，影响到工作进入死循环。写稿件从确定选题，到搜集资料，到笔记，再到成文，最后修改润色。这一系列应该很连贯才好，总会在中间遇到卡壳，甚至拖延。但往往坚持一下，继续往前走走就会坦荡通途，说不准还能达到行文流水的状态。
+最近一段时间思考最多是如何做好投资。在进入这个领域之前我也没有传统金融的经验，纯属 FOMO 进入这个行业，即使亏钱也“无法自拔”，还越来越沉迷其中。很多喜欢项目都会有让我激动的地方，都有让我沉醉其中的理由。大家都会觉得“it&rsquo;s never boring in Crypto&rdquo;。外人看来眼花缭乱、不知所以然的陌生概念、词汇、高科技，而我们总有种幻觉，自己在改变世界的进程中。
+问题是，靠热情可以做好投资吗？
+从一八年至今近三年中，有多少曾经信誓旦旦的项目都逐渐无声无息。有人黯然离场，有人心有不甘，有人闷声发财，有人养精蓄锐……就在市场一片悲观，不知不觉中 DeFi 爆发了。
+这一次一样是来得措手不及。以至于，这次 DeFi 热潮中，有人问我“你这次赚翻了吧？！”我都不好意思回答。很多人大概才刚刚搞明白 DeFi 是什么，热潮又悄悄退去。
+那么，这一次你还应该捶着胸膛，自问：“为什么又没有赚到钱？”
+大概很多人当初也是凭着一个幻觉进入这个市场，“赚钱真容易！”正是这种幻觉造就了牛市，也引来了市场崩塌。
+这个市场奇妙之处就是，每当有幻想破灭的时候，总会出现生机。也因此，“韭菜”一茬又一茬。我不喜欢用“韭菜”这个词，因为总会让觉得背后藏着一把“镰刀”。一个零和游戏与赌场何异于赌场？
+之所以有生机，正是因为在市场激荡中，还有一群创造者，贡献者。他们心里也许藏着中本聪，希望做出好的产品，渴望改变世界，希望传递火种。
+也有人在做猎人，有人在做秃鹫，有人在做恶狼，有人在做赌狗……无论哪一种，最后的赢家应该有些优势。例如，捕猎需要耐心，秃鹫要敏锐，恶狼要凶狠，赌狗要知己知彼。
+无论你是创造者还是赌狗，总有些东西需要坚持，也有些需要不断变化。
+这是我最近零碎的想法。愿世上不再有韭菜，愿我写的能有人爱看。
+熊市也可以再长点，我好积蓄一些能量。
+近期动态  以太坊数据分析平台 Dune Analytics 获 Dragonfly Capital 领投种子轮 200 万美元 波卡项目 PureStake 获 140 万美元种子轮，Moonbeam Network 即将上线 加密艺术家 Pak 在加密艺术品交易平台 MakersPlace 发布《终点》(Terminus) 系列五部作品 资产管理公司 Panxora 成立五千万美元基金购买 DeFi 相关代币 主动做市商算法的去中心交易平台 DODO 公布由 Pantera Capital、Three Arrows Capital 和 Binance Labs 联合领投，Coinbase Ventures 参投的 500 万美元的私募轮融资 新型自动化做市协议 CoFiX 宣布获得来自火币集团旗下 Huobi DeFi Labs、Dragonfly Capital、Coinbase Ventures 和多位去中心化金融领域天使投资人总计 50 万美元的资金支持，这笔资金支持将全部用于支付项目的早期开发成本和合约审计支出  推荐阅读 # - Oasis Network。数据是信息时代的金矿，用户作为金矿的来源，最后的收益用户丝毫没有享受到，甚至会受到诱导贡献更多数据。Oasis Network 作为隐私方案就是解决这个问题。本文从技术方面出发，讲解隐私协议的应用前景。">
+<meta itemprop="datePublished" content="2020-10-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-10-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="132">
+
+
+
+<meta itemprop="keywords" content="newsletter,中文," /><meta property="og:title" content="分布所周刊 #16 | 循环往复" />
+<meta property="og:description" content="时间真快，有一个月没有更新公号了。
+最近有些焦虑，影响到工作进入死循环。写稿件从确定选题，到搜集资料，到笔记，再到成文，最后修改润色。这一系列应该很连贯才好，总会在中间遇到卡壳，甚至拖延。但往往坚持一下，继续往前走走就会坦荡通途，说不准还能达到行文流水的状态。
+最近一段时间思考最多是如何做好投资。在进入这个领域之前我也没有传统金融的经验，纯属 FOMO 进入这个行业，即使亏钱也“无法自拔”，还越来越沉迷其中。很多喜欢项目都会有让我激动的地方，都有让我沉醉其中的理由。大家都会觉得“it&rsquo;s never boring in Crypto&rdquo;。外人看来眼花缭乱、不知所以然的陌生概念、词汇、高科技，而我们总有种幻觉，自己在改变世界的进程中。
+问题是，靠热情可以做好投资吗？
+从一八年至今近三年中，有多少曾经信誓旦旦的项目都逐渐无声无息。有人黯然离场，有人心有不甘，有人闷声发财，有人养精蓄锐……就在市场一片悲观，不知不觉中 DeFi 爆发了。
+这一次一样是来得措手不及。以至于，这次 DeFi 热潮中，有人问我“你这次赚翻了吧？！”我都不好意思回答。很多人大概才刚刚搞明白 DeFi 是什么，热潮又悄悄退去。
+那么，这一次你还应该捶着胸膛，自问：“为什么又没有赚到钱？”
+大概很多人当初也是凭着一个幻觉进入这个市场，“赚钱真容易！”正是这种幻觉造就了牛市，也引来了市场崩塌。
+这个市场奇妙之处就是，每当有幻想破灭的时候，总会出现生机。也因此，“韭菜”一茬又一茬。我不喜欢用“韭菜”这个词，因为总会让觉得背后藏着一把“镰刀”。一个零和游戏与赌场何异于赌场？
+之所以有生机，正是因为在市场激荡中，还有一群创造者，贡献者。他们心里也许藏着中本聪，希望做出好的产品，渴望改变世界，希望传递火种。
+也有人在做猎人，有人在做秃鹫，有人在做恶狼，有人在做赌狗……无论哪一种，最后的赢家应该有些优势。例如，捕猎需要耐心，秃鹫要敏锐，恶狼要凶狠，赌狗要知己知彼。
+无论你是创造者还是赌狗，总有些东西需要坚持，也有些需要不断变化。
+这是我最近零碎的想法。愿世上不再有韭菜，愿我写的能有人爱看。
+熊市也可以再长点，我好积蓄一些能量。
+近期动态  以太坊数据分析平台 Dune Analytics 获 Dragonfly Capital 领投种子轮 200 万美元 波卡项目 PureStake 获 140 万美元种子轮，Moonbeam Network 即将上线 加密艺术家 Pak 在加密艺术品交易平台 MakersPlace 发布《终点》(Terminus) 系列五部作品 资产管理公司 Panxora 成立五千万美元基金购买 DeFi 相关代币 主动做市商算法的去中心交易平台 DODO 公布由 Pantera Capital、Three Arrows Capital 和 Binance Labs 联合领投，Coinbase Ventures 参投的 500 万美元的私募轮融资 新型自动化做市协议 CoFiX 宣布获得来自火币集团旗下 Huobi DeFi Labs、Dragonfly Capital、Coinbase Ventures 和多位去中心化金融领域天使投资人总计 50 万美元的资金支持，这笔资金支持将全部用于支付项目的早期开发成本和合约审计支出  推荐阅读 # - Oasis Network。数据是信息时代的金矿，用户作为金矿的来源，最后的收益用户丝毫没有享受到，甚至会受到诱导贡献更多数据。Oasis Network 作为隐私方案就是解决这个问题。本文从技术方面出发，讲解隐私协议的应用前景。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leoyoung0.github.io/posts/2020-10-19_newsletter-16/" />
+<meta property="article:published_time" content="2020-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="分布所周刊 #16 | 循环往复"/>
+<meta name="twitter:description" content="时间真快，有一个月没有更新公号了。
+最近有些焦虑，影响到工作进入死循环。写稿件从确定选题，到搜集资料，到笔记，再到成文，最后修改润色。这一系列应该很连贯才好，总会在中间遇到卡壳，甚至拖延。但往往坚持一下，继续往前走走就会坦荡通途，说不准还能达到行文流水的状态。
+最近一段时间思考最多是如何做好投资。在进入这个领域之前我也没有传统金融的经验，纯属 FOMO 进入这个行业，即使亏钱也“无法自拔”，还越来越沉迷其中。很多喜欢项目都会有让我激动的地方，都有让我沉醉其中的理由。大家都会觉得“it&rsquo;s never boring in Crypto&rdquo;。外人看来眼花缭乱、不知所以然的陌生概念、词汇、高科技，而我们总有种幻觉，自己在改变世界的进程中。
+问题是，靠热情可以做好投资吗？
+从一八年至今近三年中，有多少曾经信誓旦旦的项目都逐渐无声无息。有人黯然离场，有人心有不甘，有人闷声发财，有人养精蓄锐……就在市场一片悲观，不知不觉中 DeFi 爆发了。
+这一次一样是来得措手不及。以至于，这次 DeFi 热潮中，有人问我“你这次赚翻了吧？！”我都不好意思回答。很多人大概才刚刚搞明白 DeFi 是什么，热潮又悄悄退去。
+那么，这一次你还应该捶着胸膛，自问：“为什么又没有赚到钱？”
+大概很多人当初也是凭着一个幻觉进入这个市场，“赚钱真容易！”正是这种幻觉造就了牛市，也引来了市场崩塌。
+这个市场奇妙之处就是，每当有幻想破灭的时候，总会出现生机。也因此，“韭菜”一茬又一茬。我不喜欢用“韭菜”这个词，因为总会让觉得背后藏着一把“镰刀”。一个零和游戏与赌场何异于赌场？
+之所以有生机，正是因为在市场激荡中，还有一群创造者，贡献者。他们心里也许藏着中本聪，希望做出好的产品，渴望改变世界，希望传递火种。
+也有人在做猎人，有人在做秃鹫，有人在做恶狼，有人在做赌狗……无论哪一种，最后的赢家应该有些优势。例如，捕猎需要耐心，秃鹫要敏锐，恶狼要凶狠，赌狗要知己知彼。
+无论你是创造者还是赌狗，总有些东西需要坚持，也有些需要不断变化。
+这是我最近零碎的想法。愿世上不再有韭菜，愿我写的能有人爱看。
+熊市也可以再长点，我好积蓄一些能量。
+近期动态  以太坊数据分析平台 Dune Analytics 获 Dragonfly Capital 领投种子轮 200 万美元 波卡项目 PureStake 获 140 万美元种子轮，Moonbeam Network 即将上线 加密艺术家 Pak 在加密艺术品交易平台 MakersPlace 发布《终点》(Terminus) 系列五部作品 资产管理公司 Panxora 成立五千万美元基金购买 DeFi 相关代币 主动做市商算法的去中心交易平台 DODO 公布由 Pantera Capital、Three Arrows Capital 和 Binance Labs 联合领投，Coinbase Ventures 参投的 500 万美元的私募轮融资 新型自动化做市协议 CoFiX 宣布获得来自火币集团旗下 Huobi DeFi Labs、Dragonfly Capital、Coinbase Ventures 和多位去中心化金融领域天使投资人总计 50 万美元的资金支持，这笔资金支持将全部用于支付项目的早期开发成本和合约审计支出  推荐阅读 # - Oasis Network。数据是信息时代的金矿，用户作为金矿的来源，最后的收益用户丝毫没有享受到，甚至会受到诱导贡献更多数据。Oasis Network 作为隐私方案就是解决这个问题。本文从技术方面出发，讲解隐私协议的应用前景。"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>分布所周刊 #16 | 循环往复</title>
+	<link rel="stylesheet" href="https://leoyoung0.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://leoyoung0.github.io/">Leo Young&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://leoyoung0.github.io/posts/">Posts</a>
+				<a href="https://leoyoung0.github.io/about-me/">About Me</a>
+				<a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/leoyoung0" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://github.com/leoyoung0" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:leoyoung.yk@gmail.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://leoyoung0.github.io/posts/">Posts</a></li>
+			<li><a href="https://leoyoung0.github.io/about-me/">About Me</a></li>
+			<li><a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Oct 18, 2020</span></div>
+				<h1>分布所周刊 #16 | 循环往复</h1>
+			</header>
+			<div class="content">
+				<p>时间真快，有一个月没有更新公号了。</p>
+<p>最近有些焦虑，影响到工作进入死循环。写稿件从确定选题，到搜集资料，到笔记，再到成文，最后修改润色。这一系列应该很连贯才好，总会在中间遇到卡壳，甚至拖延。但往往坚持一下，继续往前走走就会坦荡通途，说不准还能达到行文流水的状态。</p>
+<p>最近一段时间思考最多是如何做好投资。在进入这个领域之前我也没有传统金融的经验，纯属 FOMO 进入这个行业，即使亏钱也“无法自拔”，还越来越沉迷其中。很多喜欢项目都会有让我激动的地方，都有让我沉醉其中的理由。大家都会觉得“it&rsquo;s never boring in Crypto&rdquo;。外人看来眼花缭乱、不知所以然的陌生概念、词汇、高科技，而我们总有种幻觉，自己在改变世界的进程中。</p>
+<p>问题是，靠热情可以做好投资吗？</p>
+<p>从一八年至今近三年中，有多少曾经信誓旦旦的项目都逐渐无声无息。有人黯然离场，有人心有不甘，有人闷声发财，有人养精蓄锐……就在市场一片悲观，不知不觉中 DeFi 爆发了。</p>
+<p>这一次一样是来得措手不及。以至于，这次 DeFi 热潮中，有人问我“你这次赚翻了吧？！”我都不好意思回答。很多人大概才刚刚搞明白 DeFi 是什么，热潮又悄悄退去。</p>
+<p>那么，这一次你还应该捶着胸膛，自问：“为什么又没有赚到钱？”</p>
+<p>大概很多人当初也是凭着一个幻觉进入这个市场，“赚钱真容易！”正是这种幻觉造就了牛市，也引来了市场崩塌。</p>
+<p>这个市场奇妙之处就是，每当有幻想破灭的时候，总会出现生机。也因此，“韭菜”一茬又一茬。我不喜欢用“韭菜”这个词，因为总会让觉得背后藏着一把“镰刀”。一个零和游戏与赌场何异于赌场？</p>
+<p>之所以有生机，正是因为在市场激荡中，还有一群创造者，贡献者。他们心里也许藏着中本聪，希望做出好的产品，渴望改变世界，希望传递火种。</p>
+<p>也有人在做猎人，有人在做秃鹫，有人在做恶狼，有人在做赌狗……无论哪一种，最后的赢家应该有些优势。例如，捕猎需要耐心，秃鹫要敏锐，恶狼要凶狠，赌狗要知己知彼。</p>
+<p>无论你是创造者还是赌狗，总有些东西需要坚持，也有些需要不断变化。</p>
+<p>这是我最近零碎的想法。愿世上不再有韭菜，愿我写的能有人爱看。</p>
+<p>熊市也可以再长点，我好积蓄一些能量。</p>
+<h3 id="近期动态">近期动态<a href="#近期动态" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<ul>
+<li>以太坊数据分析平台 Dune Analytics 获 Dragonfly Capital 领投种子轮 200 万美元</li>
+<li>波卡项目 PureStake 获 140 万美元种子轮，<a href="https://newsletter.theblockcrypto.com/l/lYHzJrq892UK7QEPJUMj8S1A/94BI33duQXRZcWCIN2xf1w/gywb64j4QXJVUM4NY7DavQ">Moonbeam Network</a> 即将上线</li>
+<li>加密艺术家 Pak 在加密艺术品交易平台 <a href="https://makersplace.com/">MakersPlace</a> <a href="https://decrypt.co/42151/famous-crypto-artist-pak-to-release-collection-of-digital-art?utm_medium=email&amp;utm_source=sg_email&amp;utm_campaign=daily_bundle_template&amp;utm_content=The%20Art%20of%20the%20Matter">发布《终点》(Terminus) 系列</a>五部作品</li>
+<li>资产管理公司 Panxora 成立五千万美元基金购买 DeFi 相关代币</li>
+<li>主动做市商算法的去中心交易平台 DODO 公布由 Pantera Capital、Three Arrows Capital 和 Binance Labs 联合领投，Coinbase Ventures 参投的 <a href="https://www.chainnews.com/news/155566992459.htm?utm_medium=wechat&amp;utm_campaign=u149143523492&amp;from=timeline">500 万美元的私募轮融资</a></li>
+<li>新型自动化做市协议 CoFiX 宣布获得来自火币集团旗下 Huobi DeFi Labs、Dragonfly Capital、Coinbase Ventures 和多位去中心化金融领域天使投资人总计 <a href="https://www.chainnews.com/news/399389211888.htm">50 万美元的资金支持</a>，这笔资金支持将全部用于支付项目的早期开发成本和合约审计支出</li>
+</ul>
+<h3 id="推荐阅读">推荐阅读<a href="#推荐阅读" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong><em># -</em></strong> <strong>Oasis Network</strong>。数据是信息时代的金矿，用户作为金矿的来源，最后的收益用户丝毫没有享受到，甚至会受到诱导贡献更多数据。Oasis Network 作为隐私方案就是解决这个问题。本文从技术方面出发，讲解隐私协议的应用前景。</p>
+<p><a href="https://www.chainnews.com/articles/913165162517.htm">[链接]</a></p>
+<p><strong><em># -</em></strong> <strong>加密艺术大爆发</strong>。如果你关注加密艺术，这篇强烈推荐。区块链改变人类货币，下一个大规模应用可能来自艺术领域。基于加密学的分布式账本技术不仅保证艺术品防伪，便于储存，增加流通，而且还会彻底颠覆艺术表现形式。改变整个艺术市场结构同时，会创造更大的市场。就像亚马逊不止于网络书店。艺术家将脱离经纪人或画廊，取而代之的是社区，更多普通人会参与其中。艺术品交易平台也会采用更透明的交易机制。风险投资 <a href="https://medium.com/collab-currency?source=post_page-----7df920ec038e--------------------------------">Collacb+Currency</a> 的 Derek Schloss 和 Stephen McKeon 文章每篇都不容错过。</p>
+<p><a href="https://link.medium.com/IpZ5ITRiDab">[链接]</a></p>
+<p><strong><em># -</em></strong> <strong>社区治理</strong>。Uniswap 的社区治理探索将影响未来社区，甚至产品的发展。研究机构 Gauntlet 给出一些建议。</p>
+<p><a href="https://medium.com/gauntlet-networks/uniswap-voting-philosophy-c3de0edbb41c">[链接]</a></p>
+<p><strong><em># -</em></strong> <strong>AMM 非永久性损失 (impermanent loss)</strong>。衍生品平台讲解如何降低 IL 风险。</p>
+<p><a href="https://medium.com/@alpha5_io/hedging-amm-risk-it-works-d54b3ba13f1e">[链接]</a></p>
+<p><strong><em># -</em></strong> <strong>DEX 流动性聚合器分析</strong>。来看看 0x 的聚合器相比较 Uniswap 有哪些优势。</p>
+<p><a href="https://blog.0xproject.com/a-comprehensive-analysis-on-dex-liquidity-aggregators-performance-dfb9654b0723">[链接]</a></p>
+<p><strong><em># -</em></strong> <strong>市场思考</strong>。橡树资本 Howard Marks 的最新备忘录。</p>
+<p><a href="https://www.oaktreecapital.com/docs/default-source/memos/coming-into-focus.pdf">[链接]</a></p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>楊小猴</p>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://leoyoung0.github.io/tags/newsletter">newsletter</a></span><span class="tag"><a href="https://leoyoung0.github.io/tags/%E4%B8%AD%E6%96%87">中文</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>132 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-10-18 08:00 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://leoyoung0.github.io/posts/2020-12-23-%E9%9A%8F%E6%83%B3-%E5%85%B3%E4%BA%8E%E5%B8%82%E5%9C%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>随想 | 关于市场的一点思考</span>
+			</a>
+			<a class="prev-post" href="https://leoyoung0.github.io/posts/2020-9-20_newsletter-15/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>分布所周刊 #15 | 酝酿新走势</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2022 <a href="https://leoyoung0.github.io/">Leo Young</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://leoyoung0.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://leoyoung0.github.io/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+
+</html>

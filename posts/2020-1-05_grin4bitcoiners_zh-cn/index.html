@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Grin/Mimblewimble 较比特币之优势">
+<meta itemprop="description" content="本篇是本作者翻译的 Grin 文档之一。简单比较 Bitcoin 之间的优劣。
+  阅读其他语言版本：Korean、 English  隐私和可互换性 Grin 链上交易有三个隐私特性：
+ 没有交易地址； 没有交易金额； 两笔交易，一笔输入是另一笔输出，可以在一个区块中混合成为一笔交易，清除所有中间信息。  前两个特性意味着所有交易不可识别。只要直接进行交易，所有输入、输出数据都显示为随机数（专业术语就是“随机曲线点”）。
+另外，单个区块中可以添加更多交易。Grin 区块内数据就像是一笔大交易，原始交易所有输入和输出数据都被删除。
+扩展性 如上所述，由于 Mimblewimble 交易和区块格式，交易可以合并，一笔输出可以从另一笔的输入直接花费。例如，甲给乙转账，乙之后转账给丙。这一系列交易中可以去除乙的数据，乙的交易数据绝对不会在链上显示。
+详细来说，区块间多数交易输出迟早都会变成另笔交易的输入。因此，所有输出花费都可以安全删除。而且假设 Grin 交易量与比特币相当，仅需几个 GB 或更少容量即可存储、下载和验证完整区块。
+这就意味着 Grin 区块链可扩展用户数量，而不是交易数量。目前有个问题是：每笔交易需要保留小量数据（“内核”，大约 100 字节）。但开发团队在努力优化。
+脚本 或许你听说过 Mimblewimble 协议不支持脚本 (Script)。某种程度上这是事实。但利用密码学方法，许多需要脚本的比特币合约在 Grin 上可以使用椭圆曲线密码学 (Elliptic Curve Cryptography) 实现。迄今为止已知的方法有：
+ 多签交易 原子交换 时间锁定交易和输出 闪电网络  发行率 比特币出块时间为 10 分钟，初始每个块奖励 50 btc，每四年减半，直到 2100 万比特币全部挖出。Grin 的货币发行率为线性增长，也就是说不会降低。目前为每 60 秒出块，每个区块奖励 60 Grin。这种发行方也有效，因为 1）稀释率逐渐为零；2）每年丢失或销毁的币数量也不小。
+常见问答集 什么？没有地址？ 没有地址。Grin 交易中所有输出是单独数据，与之前的输出不共享数据。不用已知地址发送货币，取而代之的是交互式交易，两个（或更多）钱包间彼此交换数据。这种交互方式不需要双方保持同时在线。实际上，有很多方式可以在两个程序间私密安全地进行交互。也可以使用电子邮件或 Signal（或“信鸽”）来进行此种交互通讯。">
+<meta itemprop="datePublished" content="2020-01-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="85">
+
+
+
+<meta itemprop="keywords" content="translation,crypto,中文," /><meta property="og:title" content="Grin/Mimblewimble 较比特币之优势" />
+<meta property="og:description" content="本篇是本作者翻译的 Grin 文档之一。简单比较 Bitcoin 之间的优劣。
+  阅读其他语言版本：Korean、 English  隐私和可互换性 Grin 链上交易有三个隐私特性：
+ 没有交易地址； 没有交易金额； 两笔交易，一笔输入是另一笔输出，可以在一个区块中混合成为一笔交易，清除所有中间信息。  前两个特性意味着所有交易不可识别。只要直接进行交易，所有输入、输出数据都显示为随机数（专业术语就是“随机曲线点”）。
+另外，单个区块中可以添加更多交易。Grin 区块内数据就像是一笔大交易，原始交易所有输入和输出数据都被删除。
+扩展性 如上所述，由于 Mimblewimble 交易和区块格式，交易可以合并，一笔输出可以从另一笔的输入直接花费。例如，甲给乙转账，乙之后转账给丙。这一系列交易中可以去除乙的数据，乙的交易数据绝对不会在链上显示。
+详细来说，区块间多数交易输出迟早都会变成另笔交易的输入。因此，所有输出花费都可以安全删除。而且假设 Grin 交易量与比特币相当，仅需几个 GB 或更少容量即可存储、下载和验证完整区块。
+这就意味着 Grin 区块链可扩展用户数量，而不是交易数量。目前有个问题是：每笔交易需要保留小量数据（“内核”，大约 100 字节）。但开发团队在努力优化。
+脚本 或许你听说过 Mimblewimble 协议不支持脚本 (Script)。某种程度上这是事实。但利用密码学方法，许多需要脚本的比特币合约在 Grin 上可以使用椭圆曲线密码学 (Elliptic Curve Cryptography) 实现。迄今为止已知的方法有：
+ 多签交易 原子交换 时间锁定交易和输出 闪电网络  发行率 比特币出块时间为 10 分钟，初始每个块奖励 50 btc，每四年减半，直到 2100 万比特币全部挖出。Grin 的货币发行率为线性增长，也就是说不会降低。目前为每 60 秒出块，每个区块奖励 60 Grin。这种发行方也有效，因为 1）稀释率逐渐为零；2）每年丢失或销毁的币数量也不小。
+常见问答集 什么？没有地址？ 没有地址。Grin 交易中所有输出是单独数据，与之前的输出不共享数据。不用已知地址发送货币，取而代之的是交互式交易，两个（或更多）钱包间彼此交换数据。这种交互方式不需要双方保持同时在线。实际上，有很多方式可以在两个程序间私密安全地进行交互。也可以使用电子邮件或 Signal（或“信鸽”）来进行此种交互通讯。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leoyoung0.github.io/posts/2020-1-05_grin4bitcoiners_zh-cn/" />
+<meta property="article:published_time" content="2020-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Grin/Mimblewimble 较比特币之优势"/>
+<meta name="twitter:description" content="本篇是本作者翻译的 Grin 文档之一。简单比较 Bitcoin 之间的优劣。
+  阅读其他语言版本：Korean、 English  隐私和可互换性 Grin 链上交易有三个隐私特性：
+ 没有交易地址； 没有交易金额； 两笔交易，一笔输入是另一笔输出，可以在一个区块中混合成为一笔交易，清除所有中间信息。  前两个特性意味着所有交易不可识别。只要直接进行交易，所有输入、输出数据都显示为随机数（专业术语就是“随机曲线点”）。
+另外，单个区块中可以添加更多交易。Grin 区块内数据就像是一笔大交易，原始交易所有输入和输出数据都被删除。
+扩展性 如上所述，由于 Mimblewimble 交易和区块格式，交易可以合并，一笔输出可以从另一笔的输入直接花费。例如，甲给乙转账，乙之后转账给丙。这一系列交易中可以去除乙的数据，乙的交易数据绝对不会在链上显示。
+详细来说，区块间多数交易输出迟早都会变成另笔交易的输入。因此，所有输出花费都可以安全删除。而且假设 Grin 交易量与比特币相当，仅需几个 GB 或更少容量即可存储、下载和验证完整区块。
+这就意味着 Grin 区块链可扩展用户数量，而不是交易数量。目前有个问题是：每笔交易需要保留小量数据（“内核”，大约 100 字节）。但开发团队在努力优化。
+脚本 或许你听说过 Mimblewimble 协议不支持脚本 (Script)。某种程度上这是事实。但利用密码学方法，许多需要脚本的比特币合约在 Grin 上可以使用椭圆曲线密码学 (Elliptic Curve Cryptography) 实现。迄今为止已知的方法有：
+ 多签交易 原子交换 时间锁定交易和输出 闪电网络  发行率 比特币出块时间为 10 分钟，初始每个块奖励 50 btc，每四年减半，直到 2100 万比特币全部挖出。Grin 的货币发行率为线性增长，也就是说不会降低。目前为每 60 秒出块，每个区块奖励 60 Grin。这种发行方也有效，因为 1）稀释率逐渐为零；2）每年丢失或销毁的币数量也不小。
+常见问答集 什么？没有地址？ 没有地址。Grin 交易中所有输出是单独数据，与之前的输出不共享数据。不用已知地址发送货币，取而代之的是交互式交易，两个（或更多）钱包间彼此交换数据。这种交互方式不需要双方保持同时在线。实际上，有很多方式可以在两个程序间私密安全地进行交互。也可以使用电子邮件或 Signal（或“信鸽”）来进行此种交互通讯。"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Grin/Mimblewimble 较比特币之优势</title>
+	<link rel="stylesheet" href="https://leoyoung0.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://leoyoung0.github.io/">Leo Young&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://leoyoung0.github.io/posts/">Posts</a>
+				<a href="https://leoyoung0.github.io/about-me/">About Me</a>
+				<a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/leoyoung0" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://github.com/leoyoung0" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:leoyoung.yk@gmail.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://leoyoung0.github.io/posts/">Posts</a></li>
+			<li><a href="https://leoyoung0.github.io/about-me/">About Me</a></li>
+			<li><a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 5, 2020</span></div>
+				<h1>Grin/Mimblewimble 较比特币之优势</h1>
+			</header>
+			<div class="content">
+				<p><em>本篇是本作者翻译的 Grin 文档之一。简单比较 Bitcoin 之间的优劣。</em></p>
+<hr>
+<ul>
+<li>阅读其他语言版本：<a href="grin4bitcoiners_KR.md">Korean</a>、 <a href="grin4bitcoiners.md">English</a></li>
+</ul>
+<h2 id="隐私和可互换性">隐私和可互换性<a href="#隐私和可互换性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>Grin 链上交易有三个隐私特性：</p>
+<ol>
+<li>没有交易地址；</li>
+<li>没有交易金额；</li>
+<li>两笔交易，一笔输入是另一笔输出，可以在一个区块中混合成为一笔交易，清除所有中间信息。</li>
+</ol>
+<p>前两个特性意味着所有交易不可识别。只要直接进行交易，所有输入、输出数据都显示为随机数（专业术语就是“随机曲线点”）。</p>
+<p>另外，单个区块中可以添加更多交易。Grin 区块内数据就像是一笔大交易，原始交易所有输入和输出数据都被删除。</p>
+<h2 id="扩展性">扩展性<a href="#扩展性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>如上所述，由于 Mimblewimble 交易和区块格式，交易可以合并，一笔输出可以从另一笔的输入直接花费。例如，甲给乙转账，乙之后转账给丙。这一系列交易中可以去除乙的数据，乙的交易数据绝对不会在链上显示。</p>
+<p>详细来说，区块间多数交易输出迟早都会变成另笔交易的输入。因此，<em>所有输出花费都可以安全删除</em>。而且假设 Grin 交易量与比特币相当，仅需几个 GB 或更少容量即可存储、下载和验证完整区块。</p>
+<p>这就意味着 Grin 区块链可扩展用户数量，而不是交易数量。目前有个问题是：每笔交易需要保留小量数据（“内核”，大约 100 字节）。但开发团队在努力优化。</p>
+<h2 id="脚本">脚本<a href="#脚本" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>或许你听说过 Mimblewimble 协议不支持脚本 (Script)。某种程度上这是事实。但利用密码学方法，许多需要脚本的比特币合约在 Grin 上可以使用椭圆曲线密码学 (Elliptic Curve Cryptography) 实现。迄今为止已知的方法有：</p>
+<ul>
+<li>多签交易</li>
+<li>原子交换</li>
+<li>时间锁定交易和输出</li>
+<li>闪电网络</li>
+</ul>
+<h2 id="发行率">发行率<a href="#发行率" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>比特币出块时间为 10 分钟，初始每个块奖励 50 btc，每四年减半，直到 2100 万比特币全部挖出。Grin 的货币发行率为线性增长，也就是说不会降低。目前为每 60 秒出块，每个区块奖励 60 Grin。这种发行方也有效，因为 1）稀释率逐渐为零；2）每年丢失或销毁的币数量也不小。</p>
+<h2 id="常见问答集">常见问答集<a href="#常见问答集" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="什么没有地址">什么？没有地址？<a href="#什么没有地址" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>没有地址。Grin 交易中所有输出是单独数据，与之前的输出不共享数据。不用已知地址发送货币，取而代之的是交互式交易，两个（或更多）钱包间彼此交换数据。这种交互方式不需要双方保持同时在线。实际上，有很多方式可以在两个程序间私密安全地进行交互。也可以使用电子邮件或 Signal（或“信鸽”）来进行此种交互通讯。</p>
+<h3 id="如果删除交易信息是不是就能欺骗并造新币">如果删除交易信息，是不是就能欺骗并造新币？<a href="#如果删除交易信息是不是就能欺骗并造新币" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>不可以，这就是 Mimblewimble 协议和 Grin 的出众之处。机密交易是一种<a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">同态加密</a>形式。Grin 不用公开交易金额，即可验证交易输入总额等于交易输出与交易费总和。也就是说，比较挖矿产生的货币总量与现有货币总量，Grin 节点来检查货币总量是否准确。</p>
+<h3 id="如果监听交易中继我是不是就能在交易核销前分析出持币人信息">如果监听交易中继，我是不是就能在交易核销前分析出持币人信息？<a href="#如果监听交易中继我是不是就能在交易核销前分析出持币人信息" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>你可以分析出哪笔交易的输出花费，但也仅限这么多信息。所有输入与输出都是随机数据，因此你没法识别钱是不是被转走，是不是还是同一个人持有，哪笔输出是真正的转账，及哪笔是找零等等。Grin 交易完成<em>没有可识别信息</em>。</p>
+<p>另外，Grin 利用<a href="dandelion/dandelion.md">蒲公英中继</a>技术来隐藏交易 IP 地址和客户端，并允许汇集交易，从而提高匿名性。</p>
+<h3 id="出现量子计算机怎么办">出现量子计算机怎么办？<a href="#出现量子计算机怎么办" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>每笔 Grin 的输出交易中，也包含哈希数据。这些数据抗量子计算。如果出现量子计算机，我们可以安全引入其他验证方式，来保护现有货币系统不会遭到黑客攻击。</p>
+<h3 id="所有魔法是怎么实现的">所有魔法是怎么实现的？<a href="#所有魔法是怎么实现的" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>详情请参阅<a href="intro.md">技术简介</a>。</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://leoyoung0.github.io/tags/translation">translation</a></span><span class="tag"><a href="https://leoyoung0.github.io/tags/crypto">crypto</a></span><span class="tag"><a href="https://leoyoung0.github.io/tags/%E4%B8%AD%E6%96%87">中文</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>85 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-05 08:00 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://leoyoung0.github.io/posts/2020-1-28_%E5%85%B3%E4%BA%8E%E4%BA%8B%E5%AE%9E%E7%9A%84%E8%B0%A3%E8%A8%80/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>关于事实的“谣言”</span>
+			</a>
+			<a class="prev-post" href="https://leoyoung0.github.io/posts/2020-1-05_switch_commitment_zh-cn/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>秘诺切换简介</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2022 <a href="https://leoyoung0.github.io/">Leo Young</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://leoyoung0.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://leoyoung0.github.io/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+
+</html>

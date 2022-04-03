@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="分布所周刊 #02 | DeFi 可以变革金融吗">
+<meta itemprop="description" content="「慢与记忆之间，速度与遗忘之间，冥冥之中存在着某种联系。」
+（There is a secret bond between slowness and memory, between speed and forgetting.）
+&ndash; 米兰 · 昆德拉 (Milan Kundera)
+  如今，信息像病毒一样以我们不可感知的速度繁衍传播。一则新闻可以瞬时传遍所有社交媒体和网络媒体。兴奋、失落、恐慌…种种情绪也会像病毒一样传染。一条假消息可以带来集体失控。一条新闻可以让一支垃圾股疯狂。即便集体民意的反弹，面对强权还是那么无力。每天世界上演的每一出现实剧目都难免超出我们的理解。我们发现，自己还未从曾经的桎梏中解放，却已变成信息的奴隶。
+互联网时代
+于我，阅读越来越少，日常的“看”、“浏览”像呼吸一样随意且无意识。那么我把日常所见记录下来，变成一句话，一段文字。至少这也算是对日常机械化和无意识生活的一种抵抗。
+信息快速传递的一个好处就是，我在输入的同时可以同步输出。也就是我“看“到的同时可以同步输出我所“见”的感受。而我的输出可以变成其他人的“看”，其他人则再会有他们各自的所“见”。
+这就是我写这个周报的目的，将我所见所想传递出去。一起去探索理解这个复杂难以捉摸的世界。
+区块链 # - 链文 - 说透当红 Compound 借贷即挖矿，图解数字资产数据全景
+这周 DeFi 太火。以太坊链上去中心化借贷平台 Compound 以抵押 15 亿美元数字资产夺得以太坊最有价值应用。但目前来看 DeFi 并未吸引很多圈外注意力，也没有像 2017 年 ICO 热潮吸引众多 VC。
+如果跟互联网相比，DeFi 大概就像二十年之前的互联网，只有少数一些爱好者交流关注。相信 DeFi 总会为传统金融世界打开一扇窗，让所有人感受到去中心化的力量。这个市场也会生长出更具价值增长的产品，而不仅仅是昙花一现的零和游戏。但所有这些都需要时间。在这之前我们不妨来加深理解 DeFi。
+# - 密码朋克简史 (作者：Dion Dalton-Bridges)
+数字时代的个人隐私，一直是密码朋克关注的重点。从David Chaum 到 Wei Dai、Hal Finney、Nick Szabo、Adam Back 到中本聪，从密码朋克邮件列表到比特币，再到以太坊。作者简述密码朋克发展和加密货币之间的紧密联系。">
+<meta itemprop="datePublished" content="2020-06-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="195">
+
+
+
+<meta itemprop="keywords" content="newsletter,中文," /><meta property="og:title" content="分布所周刊 #02 | DeFi 可以变革金融吗" />
+<meta property="og:description" content="「慢与记忆之间，速度与遗忘之间，冥冥之中存在着某种联系。」
+（There is a secret bond between slowness and memory, between speed and forgetting.）
+&ndash; 米兰 · 昆德拉 (Milan Kundera)
+  如今，信息像病毒一样以我们不可感知的速度繁衍传播。一则新闻可以瞬时传遍所有社交媒体和网络媒体。兴奋、失落、恐慌…种种情绪也会像病毒一样传染。一条假消息可以带来集体失控。一条新闻可以让一支垃圾股疯狂。即便集体民意的反弹，面对强权还是那么无力。每天世界上演的每一出现实剧目都难免超出我们的理解。我们发现，自己还未从曾经的桎梏中解放，却已变成信息的奴隶。
+互联网时代
+于我，阅读越来越少，日常的“看”、“浏览”像呼吸一样随意且无意识。那么我把日常所见记录下来，变成一句话，一段文字。至少这也算是对日常机械化和无意识生活的一种抵抗。
+信息快速传递的一个好处就是，我在输入的同时可以同步输出。也就是我“看“到的同时可以同步输出我所“见”的感受。而我的输出可以变成其他人的“看”，其他人则再会有他们各自的所“见”。
+这就是我写这个周报的目的，将我所见所想传递出去。一起去探索理解这个复杂难以捉摸的世界。
+区块链 # - 链文 - 说透当红 Compound 借贷即挖矿，图解数字资产数据全景
+这周 DeFi 太火。以太坊链上去中心化借贷平台 Compound 以抵押 15 亿美元数字资产夺得以太坊最有价值应用。但目前来看 DeFi 并未吸引很多圈外注意力，也没有像 2017 年 ICO 热潮吸引众多 VC。
+如果跟互联网相比，DeFi 大概就像二十年之前的互联网，只有少数一些爱好者交流关注。相信 DeFi 总会为传统金融世界打开一扇窗，让所有人感受到去中心化的力量。这个市场也会生长出更具价值增长的产品，而不仅仅是昙花一现的零和游戏。但所有这些都需要时间。在这之前我们不妨来加深理解 DeFi。
+# - 密码朋克简史 (作者：Dion Dalton-Bridges)
+数字时代的个人隐私，一直是密码朋克关注的重点。从David Chaum 到 Wei Dai、Hal Finney、Nick Szabo、Adam Back 到中本聪，从密码朋克邮件列表到比特币，再到以太坊。作者简述密码朋克发展和加密货币之间的紧密联系。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leoyoung0.github.io/posts/2020-6-22_newsletter-2/" />
+<meta property="article:published_time" content="2020-06-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="分布所周刊 #02 | DeFi 可以变革金融吗"/>
+<meta name="twitter:description" content="「慢与记忆之间，速度与遗忘之间，冥冥之中存在着某种联系。」
+（There is a secret bond between slowness and memory, between speed and forgetting.）
+&ndash; 米兰 · 昆德拉 (Milan Kundera)
+  如今，信息像病毒一样以我们不可感知的速度繁衍传播。一则新闻可以瞬时传遍所有社交媒体和网络媒体。兴奋、失落、恐慌…种种情绪也会像病毒一样传染。一条假消息可以带来集体失控。一条新闻可以让一支垃圾股疯狂。即便集体民意的反弹，面对强权还是那么无力。每天世界上演的每一出现实剧目都难免超出我们的理解。我们发现，自己还未从曾经的桎梏中解放，却已变成信息的奴隶。
+互联网时代
+于我，阅读越来越少，日常的“看”、“浏览”像呼吸一样随意且无意识。那么我把日常所见记录下来，变成一句话，一段文字。至少这也算是对日常机械化和无意识生活的一种抵抗。
+信息快速传递的一个好处就是，我在输入的同时可以同步输出。也就是我“看“到的同时可以同步输出我所“见”的感受。而我的输出可以变成其他人的“看”，其他人则再会有他们各自的所“见”。
+这就是我写这个周报的目的，将我所见所想传递出去。一起去探索理解这个复杂难以捉摸的世界。
+区块链 # - 链文 - 说透当红 Compound 借贷即挖矿，图解数字资产数据全景
+这周 DeFi 太火。以太坊链上去中心化借贷平台 Compound 以抵押 15 亿美元数字资产夺得以太坊最有价值应用。但目前来看 DeFi 并未吸引很多圈外注意力，也没有像 2017 年 ICO 热潮吸引众多 VC。
+如果跟互联网相比，DeFi 大概就像二十年之前的互联网，只有少数一些爱好者交流关注。相信 DeFi 总会为传统金融世界打开一扇窗，让所有人感受到去中心化的力量。这个市场也会生长出更具价值增长的产品，而不仅仅是昙花一现的零和游戏。但所有这些都需要时间。在这之前我们不妨来加深理解 DeFi。
+# - 密码朋克简史 (作者：Dion Dalton-Bridges)
+数字时代的个人隐私，一直是密码朋克关注的重点。从David Chaum 到 Wei Dai、Hal Finney、Nick Szabo、Adam Back 到中本聪，从密码朋克邮件列表到比特币，再到以太坊。作者简述密码朋克发展和加密货币之间的紧密联系。"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>分布所周刊 #02 | DeFi 可以变革金融吗</title>
+	<link rel="stylesheet" href="https://leoyoung0.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://leoyoung0.github.io/">Leo Young&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://leoyoung0.github.io/posts/">Posts</a>
+				<a href="https://leoyoung0.github.io/about-me/">About Me</a>
+				<a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="toc-btn" class="hdr-btn desktop-only-ib" title="Table of Contents"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3" y2="6"></line><line x1="3" y1="12" x2="3" y2="12"></line><line x1="3" y1="18" x2="3" y2="18"></line></svg></button><span class="hdr-social hide-in-mobile"><a href="https://twitter.com/leoyoung0" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://github.com/leoyoung0" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:leoyoung.yk@gmail.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://leoyoung0.github.io/posts/">Posts</a></li>
+			<li><a href="https://leoyoung0.github.io/about-me/">About Me</a></li>
+			<li><a href="https://leoyoung0.github.io/portfolio-of-works/">Portfolio</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jun 22, 2020</span></div>
+				<h1>分布所周刊 #02 | DeFi 可以变革金融吗</h1>
+			</header>
+			<div class="content">
+				<hr>
+<blockquote>
+<p><em>「慢与记忆之间，速度与遗忘之间，冥冥之中存在着某种联系。」</em></p>
+<p><em>（There is a secret bond between slowness and memory, between speed and forgetting.）</em></p>
+<p>&ndash; 米兰 · 昆德拉 (Milan Kundera)</p>
+</blockquote>
+<hr>
+<p>如今，信息像病毒一样以我们不可感知的速度繁衍传播。一则新闻可以瞬时传遍所有社交媒体和网络媒体。兴奋、失落、恐慌…种种情绪也会像病毒一样传染。一条假消息可以带来集体失控。一条新闻可以让一支垃圾股疯狂。即便集体民意的反弹，面对强权还是那么无力。每天世界上演的每一出现实剧目都难免超出我们的理解。我们发现，自己还未从曾经的桎梏中解放，却已变成信息的奴隶。</p>
+<p>互联网时代</p>
+<p>于我，阅读越来越少，日常的“看”、“浏览”像呼吸一样随意且无意识。那么我把日常所见记录下来，变成一句话，一段文字。至少这也算是对日常机械化和无意识生活的一种抵抗。</p>
+<p>信息快速传递的一个好处就是，我在输入的同时可以同步输出。也就是我“看“到的同时可以同步输出我所“见”的感受。而我的输出可以变成其他人的“看”，其他人则再会有他们各自的所“见”。</p>
+<p>这就是我写这个周报的目的，将我所见所想传递出去。一起去探索理解这个复杂难以捉摸的世界。</p>
+<h3 id="区块链">区块链<a href="#区块链" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>#</strong> - <a href="https://www.chainnews.com/articles/946389290255.htm"><strong>链文 - 说透当红 Compound 借贷即挖矿，图解数字资产数据全景</strong></a></p>
+<p>这周 DeFi 太火。以太坊链上去中心化借贷平台 Compound 以抵押 15 亿美元数字资产夺得以太坊最有价值应用。但目前来看 DeFi 并未吸引很多圈外注意力，也没有像 2017 年 ICO 热潮吸引众多 VC。</p>
+<p>如果跟互联网相比，DeFi 大概就像二十年之前的互联网，只有少数一些爱好者交流关注。相信 DeFi 总会为传统金融世界打开一扇窗，让所有人感受到去中心化的力量。这个市场也会生长出更具价值增长的产品，而不仅仅是昙花一现的零和游戏。但所有这些都需要时间。在这之前我们不妨来加深理解 DeFi。</p>
+<p><strong>#</strong> - <a href="https://medium.com/the-capital/a-brief-history-of-the-cypherpunks-31ae447a14f"><strong>密码朋克简史</strong></a> (作者：<a href="https://medium.com/@diondaltonbridges?source=post_page-----31ae447a14f----------------------">Dion Dalton-Bridges</a>)</p>
+<p>数字时代的个人隐私，一直是密码朋克关注的重点。从David Chaum 到 Wei Dai、Hal Finney、Nick Szabo、Adam Back 到中本聪，从密码朋克邮件列表到比特币，再到以太坊。作者简述密码朋克发展和加密货币之间的紧密联系。</p>
+<p>当然密码学的发展还有更多重要的人：<a href="https://en.wikipedia.org/wiki/Whitfield_Diffie">Whitfield Diffie</a>、<a href="https://en.wikipedia.org/wiki/Martin_Hellman">Martin Hellman</a>、 <a href="https://en.wikipedia.org/wiki/Ralph_Merkle">Ralph Merkle</a>、<a href="https://en.wikipedia.org/wiki/Ron_Rivest">Ron Rivest</a>、<a href="https://en.wikipedia.org/wiki/Adi_Shamir">Adi Shamir</a>、<a href="https://en.wikipedia.org/wiki/Leonard_Adleman">Leonard Adleman</a>…</p>
+<p><strong>#</strong> - <a href="https://decrypt.co/33024/an-new-easy-way-to-fund-gitcoin-grants-via-maskbook"><strong>Decrypt - Maskbook 与 Gitcoin 合作推出奖金派发工具</strong></a></p>
+<p><a href="https://maskbook.com/">Maskbook</a> 是一款浏览器插件，用以加密在 Twitter、FB 等社交平台的信息，保护个人隐私。非常聪明灵巧的一款基于以太坊应用。</p>
+<p><a href="https://gitcoin.co/grants/">Gitcoin</a> 是基于以太坊的众筹项目。这次与 Maskbook 合作，利用其红包功能更轻松派发奖励金。</p>
+<p>下月，Maskbook 还将与去中心化存取协议 Arweave 合作推出基于 Twitter 的去中心化存储功能。</p>
+<p><img src="/inserted-images/NL-2_1.jpg" alt="NL-2_1"></p>
+<p><strong>#</strong> - <a href="https://bankless.substack.com/p/-guide-1-starting-with-bankless"><strong>Bankless - 无银行开放金融新手指南</strong></a></p>
+<p><a href="https://bankless.substack.com/about">Bankless</a> 是一个关于加密资产、开放金融、DeFi 的社区。这里是他们以往历史文章的合集。这要涉及比特币、以太坊、DeFi 基础知识、开发指导等内容。是了解 DeFi 的优质参考内容。部分文章需要付费订阅才能阅读。</p>
+<p><strong>#</strong> - <a href="https://hackernoon.com/blockchain-developers-report-q2-2020-8u2h3yfi?utm_source=newsletters&amp;utm_medium=firstmover&amp;utm_campaign=&amp;clid=00Q1I00000KKd2CUAT"><strong>Hackernoon - 2020 第二季度区块链开发者报告</strong></a></p>
+<p>除了波卡和 Cosmos 这些新晋协议，大多数协议开发人员不同程度减少。以太坊的 Dapp 仍旧最为活跃。这方面最有竞争力的仍旧是波卡和 Cosmos。</p>
+<p><strong>#</strong> - <a href="https://fairmint.co/continuous-securities-offering-handbook/"><strong>Fairmint - 持续证券上市 (CSO) 手册</strong></a></p>
+<p>Fairmint 是一家帮助初创公司融资平台，持续证券上市 (Continuous Securities Offering, CSO) 是其一款融资工具。ICO 中初创公司有太多特权，传统风险投资让早期投资者又有太多特权。而 CSO 能让用户、供应商、贡献者、客户都成为公司成长过程中的受益者。这是去中心化治理一种理想商业应用。未来也一定会出现一种全新的融资模式。</p>
+<h3 id="金融">金融：<a href="#金融" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>#</strong> - <a href="https://www.collaborativefund.com/blog/same-as-it-ever-was/"><strong>Collaborative Fund - 一切未变</strong></a></p>
+<p>Collaborative Fund 是一家位于纽约的科技风投基金。</p>
+<p>这是合伙人 <a href="https://www.collaborativefund.com/blog/authors/morgan/">Morgan Housel</a> 的一篇博客，对不确定的变化无常世界的思考。主要谈及以下几个方面。</p>
+<ol>
+<li>大风险通常由小风险组成。人们通常会忽略小风险，由此低估大风险产生的概率</li>
+<li>乐观是进步的推动力。即使面对困境，现实残酷，人们也会尽量寻求积极态度和心里安慰。</li>
+<li>人们会尽可能避免不适。痛苦是可控，而逃避痛苦会带来更大风险。</li>
+<li>分歧持续存在，因为个人经验各不相同。极大的创伤会永久改变个人行为，让一代人或一个国家产生极端特定情绪。</li>
+</ol>
+<p><strong>#</strong> - <a href="https://www.forbes.com/sites/sergeiklebnikov/2020/06/17/20-year-old-robinhood-customer-dies-by-suicide-after-seeing-a-730000-negative-balance/#28ac7f401638"><strong>福布斯 - Robinhood 20 岁股票客户账户欠款 73 万后自杀</strong></a></p>
+<p>Robinhood 一位 20 岁股票玩家因为欠款互联网股票券商 Robinhood 73 万美元而自杀。</p>
+<p>Forbes 杂志分析是其买卖期权套利，没有止损而造成负收益。有些交易平台没有价格保护机制，这种做空期权理论上可以出现无限负收益。</p>
+<p>谨慎使用杠杆。</p>
+<h3 id="科技">科技：<a href="#科技" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>#</strong> - <a href="https://www.businessinsider.com/exclusive-massive-spying-on-users-of-googles-chrome-shows-new-security-weakness-2020-6"><strong>Chrome 浏览器插件存在窃取用户信息</strong></a></p>
+<p>Awake Security 发现谷歌 Chrome 插件窃取数百万用户信息。这些恶意软件已被下载超过 3200 万次。谷歌表示五月下架了 70 多个恶意插件。</p>
+<h3 id="crypto-twitter">Crypto Twitter:<a href="#crypto-twitter" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>eric <a href="https://twitter.com/econoar?s=20">@econoar</a>) <a href="https://twitter.com/cburniske/status/1272532591674089472?s=20">发推</a>说：</p>
+<blockquote>
+<p>DeFi 不再是黑客挖掘的创意。</p>
+<p>这是全新的平行金融系统。</p>
+</blockquote>
+<p><img src="/inserted-images/NL-2_2.jpg" alt="NL-2_2"></p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>楊小猴</p>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://leoyoung0.github.io/tags/newsletter">newsletter</a></span><span class="tag"><a href="https://leoyoung0.github.io/tags/%E4%B8%AD%E6%96%87">中文</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>195 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-06-22 08:00 &#43;0800</p>
+			</footer>
+		</article>
+		<aside id="toc">
+			<div class="toc-title">Table of Contents</div>
+			<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#区块链">区块链</a></li>
+        <li><a href="#金融">金融：</a></li>
+        <li><a href="#科技">科技：</a></li>
+        <li><a href="#crypto-twitter">Crypto Twitter:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+		</aside>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://leoyoung0.github.io/posts/2020-6-29_newsletter-3/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>分布所周刊 #03 | 世界在骤变</span>
+			</a>
+			<a class="prev-post" href="https://leoyoung0.github.io/posts/2020-6-15_newsletter-1/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>分布所周刊 #01 | 金融创新</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2022 <a href="https://leoyoung0.github.io/">Leo Young</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://leoyoung0.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://leoyoung0.github.io/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+
+</html>
